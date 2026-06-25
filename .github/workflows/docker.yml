@@ -1,7 +1,7 @@
 name: Build and Push Docaker Image
 
 on:
-  puse:
+  push:
     branches: ["main", "master"]
 
 
