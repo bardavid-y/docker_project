@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:3000
+
+###
+GET {{baseUrl}}
+
+###
+POST  {{baseUrl}}
+
+###
+GET {{baseUrl}}/api/users
+
+###
+GET {{baseUrl}}/api/users/6a1c8392380b7d6b59f32245
+
+
+
+###
+post {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+    "name" : "ywwossi",
+    "email" : "yowwssibdf@gmail.com",
+    "age" : 51
+}
+
+
+
+### Delete a Specific User by ID
+DELETE {{baseUrl}}/api/users/6a2424146236dd0e8b9bc212

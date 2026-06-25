@@ -1,0 +1,26 @@
+name: Build and Push Docaker Image
+
+on:
+  puse:
+    branches: ["main", "master"]
+
+
+jobs:
+  build-and-puse:
+    run-on: alpine-lates
+    steps:
+      -name : Checkout code
+      uses: actions/Checkout@4
+
+      -name: Log in to github
+      uses: Docaker/login-actions@3
+      with:
+      username: ${{ secrets.DOCKERHUB_USERNAME }}
+      PASSWORD: ${{ secrets.DOCKERHUB_TOKEN}}
+
+      -name: Build And Puse   
+      uses: docker/build-puse-actions
+      with:
+        context: .
+        puse: true
+        tages: ${{ secrets.DOCKERHUB_USERNAME}}/users-managment:latest
