@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-puse:
-    run-on: alpine-lates
+    run-on: ubuntu-latest
     steps:
       -name : Checkout code
       uses: actions/Checkout@4
